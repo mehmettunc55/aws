@@ -2,7 +2,7 @@ AWSTemplateFormatVersion: 2010-09-09
 
 Description: >
   CloudFormation Template for Milliseconds Converter Application. This template creates Application Load Balancer 
-  with Auto Scaling Group of Amazon Linux 2 (ami-026dea5602e368e96) EC2 Instances which host Python Flask Web Application.
+  with Auto Scaling Group of Amazon Linux 2 (ami-0603cbe34fd08cb81) EC2 Instances which host Python Flask Web Application.
   EC2 instances are placed within WebServerSecurityGroup which allows http (80) connections only from ALBSecurityGroup,
   and Application Load Balancer is placed within ALBSecurityGroup which allows http (80) connections from anywhere.
   WebServerASG Auto Scaling Group is using the WebServerLT Launch Template in order to spin up instances needed, 
@@ -36,7 +36,7 @@ Resources:
     Type: AWS::EC2::LaunchTemplate
     Properties: 
       LaunchTemplateData:
-        ImageId: ami-09d95fab7fff3776c
+        ImageId: ami-0603cbe34fd08cb81
         InstanceType: t2.micro
         KeyName: call.training
         SecurityGroupIds: 
