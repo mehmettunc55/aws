@@ -18,19 +18,19 @@ def convert(milliseconds):
 
 @app.route('/', methods=['GET'])
 def main_get():
-    return render_template('index.html', developer_name='Callahan - Mentor', not_valid=False)
+    return render_template('index.html', developer_name='Tyler - Mentor', not_valid=False)
 
 
 @app.route('/', methods=['POST'])
 def main_post():
     alpha = request.form['number']
     if not alpha.isdecimal():
-        return render_template('index.html', developer_name='Callahan - Mentor', not_valid=True)
+        return render_template('index.html', developer_name='Tyler - Mentor', not_valid=True)
 
     number = int(alpha)
     if not (0 < number):
-        return render_template('index.html', developer_name='Callahan - Mentor', not_valid=True)
-    return render_template('result.html', milliseconds=number, result=convert(number), developer_name='Callahan - Mentor')
+        return render_template('index.html', developer_name='Tyler - Mentor', not_valid=True)
+    return render_template('result.html', milliseconds=number, result=convert(number), developer_name='Tyler - Mentor')
 
 
 if __name__ == '__main__':
