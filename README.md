@@ -1,2 +1,2 @@
 # aws
-thid is written by mehmet
+this is written by c7132-mehmet
